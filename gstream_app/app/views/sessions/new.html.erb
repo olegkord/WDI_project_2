@@ -1,7 +1,10 @@
-<h1>Login Screen</h1>
-
-<%= form_tag '/login' do %>
-  User Name: <%= text_field_tag :user_name %>
-  Password:  <%= text_field_tag :password %>
-  <%= submit_tag "Log In" %>
-<% end %>
+<div class="splash">
+  <h1>G stream</h1>
+  <ul>
+  <%= form_tag '/login' do %>
+    <li>User Name: <%= text_field_tag :user_name %></li>
+    <li>Password:  <%= text_field_tag :password %> </li>
+    <li><%= submit_tag "Log In" %></li>
+  <% end %>
+  </ul>
+</div>

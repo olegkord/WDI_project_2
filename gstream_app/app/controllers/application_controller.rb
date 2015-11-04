@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   helper_method(:current_user)
 
   def authorize
+#--->UPDATE THIS LATER!!
     redirect_to '/login' unless current_user
   end
 end
