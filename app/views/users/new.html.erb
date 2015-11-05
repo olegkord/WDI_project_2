@@ -3,10 +3,10 @@
     <h1>G Stream</h1>
     <% if @user.errors.any? %>
       <div id="error_message">
-        <h2>
+        <h5>
           <%= pluralize(@user.errors.count,"error")%>
           prevented this article from saving
-        </h2>
+        </h5>
         <ul>
           <% @user.errors.full_messages.each do |msg| %>
             <li>
