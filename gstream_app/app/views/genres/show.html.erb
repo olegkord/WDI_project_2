@@ -1,1 +1,11 @@
-<h3>My badass genre page</h3>
+<div class="row">
+  <div class="eight columns offset-by-two">
+    <h1><%=@genre.genre_name%></h1>
+    <ul>
+      <li><%= image_tag("#{@genre.img_url}", size: "400")%></li>
+      <li><%=@genre.genre_description%></li>
+
+    </ul>
+    <%= button_to "Add a Song", root_path %>
+  </div>
+</div>
