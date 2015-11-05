@@ -2,14 +2,16 @@
 <% @genres.in_groups_of(3).each do |group| %>
   <div class="row">
     <% group.each do |genre| %>
-      <%= link_to genre_path(genre) do %>
-        <div  class="genre-item four columns offset-by-zero">
-          <ul>
-            <li><%= genre.genre_name %></li>
-            <li><%= image_tag("#{genre.img_url}", class: "genre_image", size: "150")%></li>
-            <li><%= genre.genre_description%></li>
-          </ul>
-        </div>
+    <% if !genre.nil? %>
+        <%= link_to genre_path(genre) do %>
+          <div  class="genre-item four columns offset-by-zero">
+            <ul>
+              <li><%= genre.genre_name %></li>
+              <li><%= image_tag("#{genre.img_url}", class: "genre_image", size: "150")%></li>
+              <li><%= genre.genre_description%></li>
+            </ul>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
