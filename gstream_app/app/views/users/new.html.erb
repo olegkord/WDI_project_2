@@ -1,27 +1,26 @@
-<div class="splash">
-  <h1>G Stream</h1>
-  <% if @user.errors.any? %>
-    <div id="error_message">
-      <h2>
-        <%= pluralize(@user.errors.count,"error")%>
-        prevented this article from saving
-      </h2>
-      <ul>
-        <% @user.errors.full_messages.each do |msg| %>
-          <li>
-            <%= msg %> 
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+
+<h1>G Stream</h1>
+<% if @user.errors.any? %>
+  <div id="error_message">
+    <h2>
+      <%= pluralize(@user.errors.count,"error")%>
+      prevented this article from saving
+    </h2>
     <ul>
-      <%= form_for @user, url: "/genres" do |f| %>
-        <li>User Name: <%=f.text_field :user_name %></li>
-        <li>    Email: <%=f.text_field :email %></li>
-        <li> Password: <%=f.password_field :password %></li>
-        <li>Confirm Password: <%= f.password_field :password_confirmation %></li>
-        <li><%= f.submit "Register Account"%></li>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li>
+          <%= msg %>
+        </li>
       <% end %>
     </ul>
-</div>
+  </div>
+<% end %>
+  <ul>
+    <%= form_for @user, url: "/users" do |f| %>
+      <li>User Name: <%=f.text_field :user_name %></li>
+      <li>    Email: <%=f.text_field :email %></li>
+      <li> Password: <%=f.password_field :password %></li>
+      <li>Confirm Password: <%= f.password_field :password_confirmation %></li>
+      <li><%= f.submit "Register Account" %></li>
+    <% end %>
+  </ul>

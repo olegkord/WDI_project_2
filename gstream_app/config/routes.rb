@@ -11,10 +11,12 @@ Rails.application.routes.draw do
 
 
    get  '/genres' => 'genres#index'
-   post '/genres' => 'users#create'
 
-   get '/users/new' => 'users#create', as: :new_user
 
+   post '/' => 'genres#new'
+
+   get '/users/new' => 'users#new'
+   post '/users' => 'users#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

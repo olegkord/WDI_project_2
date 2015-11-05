@@ -1,1 +1,6 @@
-<%= @test %>
+<% if @genres.length == 0 %>
+  <h5>There are no genres yet!</h5>
+  <%= button_to "Add a Genre", url: "/genres", method: :get  %>
+<% else %>
+
+<% end %>

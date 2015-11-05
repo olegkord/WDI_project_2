@@ -1,7 +1,15 @@
 class GenresController < ApplicationController
 
   def index
-    @test = "Here are the genres"
+    @genres = Genre.all
+  end
+
+  def new
+    @genre = Genre.new
+  end
+
+  def create
+    binding.pry
   end
 
 end
