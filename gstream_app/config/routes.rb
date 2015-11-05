@@ -9,10 +9,12 @@ Rails.application.routes.draw do
    post '/login' => 'sessions#create'
    get  '/logout'=> 'sessions#destroy'
 
+   resources :genres
+  #  get  '/genres' => 'genres#index'
+  #  get  '/genre/new' => 'genres#new'
+  #  get '/genres/:id' => 'genres#show'
+  #  post '/genres' => 'genres#create'
 
-   get  '/genres' => 'genres#index'
-   get  '/genre/new' => 'genres#new'
-   post '/genres' => 'genres#create'
 
    get '/users/new' => 'users#new'
    post '/users' => 'users#create'

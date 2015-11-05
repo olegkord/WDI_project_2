@@ -20,13 +20,12 @@
       <li><%= link_to "Sign up", users_new_path %></li>
     </ul>
 </div>
-<div class="row">
-  <div class="ten columns offset-by-one">
+
+
     <%= yield %>
-  </div>
-</div>
+
 <footer>
-  <%= button_to "Add a Genre", genre_new_path, method: :get  %>
+  <%= button_to "Add a Genre", new_genre_path, method: :get  %>
 </footer>
 
 </body>

@@ -18,6 +18,10 @@ class GenresController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
   private
   def genre_params
     params.require(:genre).permit(
