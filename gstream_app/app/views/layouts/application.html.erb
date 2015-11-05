@@ -12,22 +12,21 @@
       signed in as <%= current_user.user_name %>
     <% end %>
   </header>
+
 <div class = "row">
-  <div class="nav-bar six columns offset-by-three">
-    <ul class="nav-menu">
+    <ul class="nav-menu six columns offset-by-three">
       <li><%= link_to "Log in", login_path %></li>
       <li><%= link_to "Log out", logout_path, data: {confirm: "Are you sure?"} %></li>
       <li><%= link_to "Sign up", users_new_path %></li>
     </ul>
-  </div>
 </div>
 <div class="row">
-  <div class="four columns offset-by-four">
+  <div class="ten columns offset-by-one">
     <%= yield %>
   </div>
 </div>
 <footer>
-  I am a footer
+  <%= button_to "Add a Genre", genre_new_path, method: :get  %>
 </footer>
 
 </body>

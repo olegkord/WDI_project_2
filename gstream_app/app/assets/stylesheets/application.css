@@ -33,20 +33,17 @@ footer {
   height: 50px;
 }
 
-.blank {
-  /*border: none;*/
-}
-.nav-menu {
-  width: 600px;
-  text-align: center;
-}
-
 .nav-menu li {
   display: inline;
   list-item: none;
-  margin-right: 40px;
-  margin-left: 40px;
+  padding: 20px;
 }
+
+.genre-item {
+
+  height: 250px;
+}
+
 
 .splash {
   width: 400px;

@@ -11,9 +11,8 @@ Rails.application.routes.draw do
 
 
    get  '/genres' => 'genres#index'
-
-
-   post '/' => 'genres#new'
+   get  '/genre/new' => 'genres#new'
+   post '/genres' => 'genres#create'
 
    get '/users/new' => 'users#new'
    post '/users' => 'users#create'
