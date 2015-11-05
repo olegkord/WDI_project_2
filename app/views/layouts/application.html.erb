@@ -15,15 +15,12 @@
 
 <div class = "row">
     <ul class="nav-menu six columns offset-by-three">
-      <li><%= link_to "Log in", login_path %></li>
-      <li><%= link_to "Log out", logout_path, data: {confirm: "Are you sure?"} %></li>
-      <li><%= link_to "Sign up", users_new_path %></li>
+      <li><%= link_to_if(!current_user, "Log in", login_path) %></li>
+      <li><%= link_to_if(current_user, "Log out", logout_path, data: {confirm: "Are you sure?"} ) %></li>
+      <li><%= link_to_if(!current_user, "Sign up", users_new_path)  %></li>
     </ul>
 </div>
-
-
-    <%= yield %>
-
+  <%= yield %>
 <footer>
   <%= button_to "Add a Genre", new_genre_path, method: :get  %>
 </footer>

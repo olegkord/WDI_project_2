@@ -1,5 +1,7 @@
 class GenresController < ApplicationController
 
+  before_action :authorize, except: [:index,:show]
+
   def index
     @genres = Genre.all
   end
