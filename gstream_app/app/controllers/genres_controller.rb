@@ -1,7 +1,7 @@
 class GenresController < ApplicationController
 
   def index
-    @test = "Hello World"
+    @test = "Here are the genres"
   end
 
 end

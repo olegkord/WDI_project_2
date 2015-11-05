@@ -24,11 +24,25 @@ ul {
 }
 
 header {
-  height: 200px;
+  height: 50px;
+}
+
+footer {
+  height: 50px;
+}
+
+.nav-menu {
+  width: 600px;
+  margin: 0px auto;
+}
+
+.nav-menu li {
+  display: inline;
+  list-item: none;
+  margin-right: 40px;
 }
 
 .splash {
   width: 400px;
-  height: 200px;
   margin: 0 auto;
 }

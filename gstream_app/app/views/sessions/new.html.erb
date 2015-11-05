@@ -3,8 +3,8 @@
   <ul>
   <%= form_tag '/login' do %>
     <li>User Name: <%= text_field_tag :user_name %></li>
-    <li>Password:  <%= text_field_tag :password %> </li>
-    <li><%= submit_tag "Log In" %></li>
+    <li>Password:  <%= password_field_tag :password %> </li>
+    <li><%= submit_tag "Log In" %><%= button_to "Register", url: "/users/new", method: :get %></li>
   <% end %>
   </ul>
 </div>
