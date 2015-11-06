@@ -4,7 +4,7 @@
     <% group.each do |genre| %>
     <% if !genre.nil? %>
         <%= link_to genre_path(genre) do %>
-          <div  class="genre-item four columns offset-by-zero">
+          <div  class="genre-item three columns offset-by-one">
             <ul>
               <li><%= genre.genre_name %></li>
               <li><%= image_tag("#{genre.img_url}", class: "genre_image", size: "150")%></li>
