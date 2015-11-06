@@ -6,6 +6,6 @@
       <li><%=@genre.genre_description%></li>
 
     </ul>
-    <%= button_to "Add a Song", root_path %>
+    <%= button_to "Add an Artist", new_genre_artist_path(@genre), method: :get %>
   </div>
 </div>
