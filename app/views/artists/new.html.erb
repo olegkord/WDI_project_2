@@ -1,1 +1,33 @@
-<h3> Add an Artist </h3>
+
+<div class="row">
+  <h3> Add an Artist </h3>
+  <div class="six columns offset-by-three">
+
+    <h1>G Stream</h1>
+    <% if !@artist.nil? && @artist.errors.any? %>
+      <div id="error_message">
+        <h5>
+          <%= pluralize(@artist.errors.count,"error")%>
+          prevented this form from saving
+        </h5>
+        <ul>
+          <% @artist.errors.full_messages.each do |msg| %>
+            <li>
+              <%= msg %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+      <ul>
+        <% binding.pry %>
+        <%= form_for @artist, url: {controller: "artists", action: "create", genre_id: @genre.id}, method: :post do |f| %>
+          <li>Artist Name: <%=f.text_field :artist_name %></li>
+          <li> Image Link: <%=f.text_field :img_url %></li>
+          <li> Artist Bio: <%=f.text_area :artist_bio %></li>
+          <li><%= f.submit "Create Artist" %></li>
+        <% end %>
+      </ul>
+  </div>
+</div>
