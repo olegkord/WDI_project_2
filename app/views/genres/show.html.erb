@@ -4,8 +4,27 @@
     <ul>
       <li><%= image_tag("#{@genre.img_url}", size: "400")%></li>
       <li><%=@genre.genre_description%></li>
-
     </ul>
     <%= button_to "Add an Artist", new_genre_artist_path(@genre), method: :get %>
   </div>
+</div>
+
+<div class="row">
+
+    <% @artists.in_groups_of(3).each do |group| %>
+      <div class="row">
+        <% group.each do |artist| %>
+          <% if !artist.nil? %>
+            <%= link_to url: {:action=>"show", :controller=>"artists", :genre_id => @genre.id} do %>
+              <div  class="artist-item three columns offset-by-one">
+                <ul>
+                  <li><%= artist.artist_name %></li>
+                  <li><%= image_tag("#{artist.img_url}", size: "200")%></li>
+                </ul>
+              </div>
+            <% end %>
+          <% end %>
+        <%end%>
+      </div>
+    <% end %>
 </div>

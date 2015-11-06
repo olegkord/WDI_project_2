@@ -15597,3 +15597,1720 @@ AbstractController::ActionNotFound (The action 'create' could not be found for A
   Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
   Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
   Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (292.5ms)
+
+
+Started POST "/genres/15/artists" for ::1 at 2015-11-06 15:45:07 -0500
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSNdaLPDRjzgKeS69xpDl0uO5QkrJ1pkwuYzHmPcEfuJD3iNOOE4WIZnCozMivF1xtLWZZeGCTCa1/h74om4RQ==", "artist"=>{"artist_name"=>"DIsclosure", "img_url"=>"http://www.jamcity.ca/wp-content/uploads/2015/05/disclosure.jpeg", "artist_bio"=>"Disclosure are an English electronic music duo consisting of brothers Howard (born 11 May 1994) and Guy Lawrence (born 25 May 1991).[3] The siblings grew up in Reigate, Surrey.[4] Their debut album, Settle, released on 3 June 2013 through PMR, was nominated for Best Dance/Electronica Album at the 2014 Grammy Awards. They recently released a second studio album, Caracal, on 25 September 2015."}, "commit"=>"Create Artist", "genre_id"=>"15"}
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `genre_params' for #<ArtistsController:0x007ff9de790b00>):
+  app/controllers/artists_controller.rb:9:in `create'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (187.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (137.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (284.8ms)
+
+
+Started POST "/genres/15/artists" for ::1 at 2015-11-06 15:45:24 -0500
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSNdaLPDRjzgKeS69xpDl0uO5QkrJ1pkwuYzHmPcEfuJD3iNOOE4WIZnCozMivF1xtLWZZeGCTCa1/h74om4RQ==", "artist"=>{"artist_name"=>"DIsclosure", "img_url"=>"http://www.jamcity.ca/wp-content/uploads/2015/05/disclosure.jpeg", "artist_bio"=>"Disclosure are an English electronic music duo consisting of brothers Howard (born 11 May 1994) and Guy Lawrence (born 25 May 1991).[3] The siblings grew up in Reigate, Surrey.[4] Their debut album, Settle, released on 3 June 2013 through PMR, was nominated for Best Dance/Electronica Album at the 2014 Grammy Awards. They recently released a second studio album, Caracal, on 25 September 2015."}, "commit"=>"Create Artist", "genre_id"=>"15"}
+  [1m[36mGenre Load (31.6ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+Completed 500 Internal Server Error in 523790ms (ActiveRecord: 232.9ms)
+
+ActionView::MissingTemplate (Missing template artists/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/olegkordunskiy/WDI-MASTER/gstream_app/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (52.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (223.2ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (121.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (5.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (278.9ms)
+
+
+Started POST "/genres/15/artists" for ::1 at 2015-11-06 15:54:09 -0500
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSNdaLPDRjzgKeS69xpDl0uO5QkrJ1pkwuYzHmPcEfuJD3iNOOE4WIZnCozMivF1xtLWZZeGCTCa1/h74om4RQ==", "artist"=>{"artist_name"=>"DIsclosure", "img_url"=>"http://www.jamcity.ca/wp-content/uploads/2015/05/disclosure.jpeg", "artist_bio"=>"Disclosure are an English electronic music duo consisting of brothers Howard (born 11 May 1994) and Guy Lawrence (born 25 May 1991).[3] The siblings grew up in Reigate, Surrey.[4] Their debut album, Settle, released on 3 June 2013 through PMR, was nominated for Best Dance/Electronica Album at the 2014 Grammy Awards. They recently released a second studio album, Caracal, on 25 September 2015."}, "commit"=>"Create Artist", "genre_id"=>"15"}
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 21.6ms)
+
+NameError (uninitialized constant ArtistsController::Genres):
+  app/controllers/artists_controller.rb:10:in `create'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (120.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (113.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (264.6ms)
+
+
+Started POST "/genres/15/artists" for ::1 at 2015-11-06 15:56:07 -0500
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSNdaLPDRjzgKeS69xpDl0uO5QkrJ1pkwuYzHmPcEfuJD3iNOOE4WIZnCozMivF1xtLWZZeGCTCa1/h74om4RQ==", "artist"=>{"artist_name"=>"Chromeo", "img_url"=>"http://first-avenue.com/sites/default/files/images/events/Chromeo_TimothySacenti_2web.jpg", "artist_bio"=>"Chromeo is a Canadian electro-funk duo from Montreal, formed in 2002 by musicians David \"Dave 1\" Macklovitch and Patrick \"P-Thugg\" Gemayel. Featuring a sound influenced by blue-eyed soul, dance music, rock, and varied styles, they've released four studio albums, their latest being 2014's White Women."}, "commit"=>"Create Artist", "genre_id"=>"15"}
+  [1m[35mGenre Load (25.5ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36m (37.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (90.5ms)[0m  INSERT INTO "artists" ("artist_name", "artist_bio", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["artist_name", "Chromeo"], ["artist_bio", "Chromeo is a Canadian electro-funk duo from Montreal, formed in 2002 by musicians David \"Dave 1\" Macklovitch and Patrick \"P-Thugg\" Gemayel. Featuring a sound influenced by blue-eyed soul, dance music, rock, and varied styles, they've released four studio albums, their latest being 2014's White Women."], ["img_url", "http://first-avenue.com/sites/default/files/images/events/Chromeo_TimothySacenti_2web.jpg"], ["created_at", "2015-11-06 20:56:07.918448"], ["updated_at", "2015-11-06 20:56:07.918448"]]
+  [1m[36mSQL (39.1ms)[0m  [1mINSERT INTO "artists_genres" ("genre_id", "artist_id") VALUES ($1, $2)[0m  [["genre_id", 15], ["artist_id", 1]]
+  [1m[35m (24.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/genres/15/artists
+Completed 302 Found in 580ms (ActiveRecord: 259.0ms)
+
+
+Started GET "/genres/15/artists" for ::1 at 2015-11-06 15:56:08 -0500
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ArtistsController):
+  actionpack (4.2.4) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (4.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (110.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (245.4ms)
+
+
+Started POST "/genres/15/artists" for ::1 at 2015-11-06 15:58:42 -0500
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSNdaLPDRjzgKeS69xpDl0uO5QkrJ1pkwuYzHmPcEfuJD3iNOOE4WIZnCozMivF1xtLWZZeGCTCa1/h74om4RQ==", "artist"=>{"artist_name"=>"Chromeo", "img_url"=>"http://first-avenue.com/sites/default/files/images/events/Chromeo_TimothySacenti_2web.jpg", "artist_bio"=>"Chromeo is a Canadian electro-funk duo from Montreal, formed in 2002 by musicians David \"Dave 1\" Macklovitch and Patrick \"P-Thugg\" Gemayel. Featuring a sound influenced by blue-eyed soul, dance music, rock, and varied styles, they've released four studio albums, their latest being 2014's White Women."}, "commit"=>"Create Artist", "genre_id"=>"15"}
+  [1m[36mGenre Load (1.8ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "artists" ("artist_name", "artist_bio", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["artist_name", "Chromeo"], ["artist_bio", "Chromeo is a Canadian electro-funk duo from Montreal, formed in 2002 by musicians David \"Dave 1\" Macklovitch and Patrick \"P-Thugg\" Gemayel. Featuring a sound influenced by blue-eyed soul, dance music, rock, and varied styles, they've released four studio albums, their latest being 2014's White Women."], ["img_url", "http://first-avenue.com/sites/default/files/images/events/Chromeo_TimothySacenti_2web.jpg"], ["created_at", "2015-11-06 20:58:42.788489"], ["updated_at", "2015-11-06 20:58:42.788489"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "artists_genres" ("genre_id", "artist_id") VALUES ($1, $2)  [["genre_id", 15], ["artist_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 38.1ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"genres", :genre_id=>"15"} missing required keys: [:id]):
+  app/controllers/artists_controller.rb:12:in `create'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (31.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (427.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (112.2ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (251.6ms)
+
+
+Started POST "/genres/15/artists" for ::1 at 2015-11-06 15:59:59 -0500
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSNdaLPDRjzgKeS69xpDl0uO5QkrJ1pkwuYzHmPcEfuJD3iNOOE4WIZnCozMivF1xtLWZZeGCTCa1/h74om4RQ==", "artist"=>{"artist_name"=>"Chromeo", "img_url"=>"http://first-avenue.com/sites/default/files/images/events/Chromeo_TimothySacenti_2web.jpg", "artist_bio"=>"Chromeo is a Canadian electro-funk duo from Montreal, formed in 2002 by musicians David \"Dave 1\" Macklovitch and Patrick \"P-Thugg\" Gemayel. Featuring a sound influenced by blue-eyed soul, dance music, rock, and varied styles, they've released four studio albums, their latest being 2014's White Women."}, "commit"=>"Create Artist", "genre_id"=>"15"}
+  [1m[35mGenre Load (0.4ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "artists" ("artist_name", "artist_bio", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["artist_name", "Chromeo"], ["artist_bio", "Chromeo is a Canadian electro-funk duo from Montreal, formed in 2002 by musicians David \"Dave 1\" Macklovitch and Patrick \"P-Thugg\" Gemayel. Featuring a sound influenced by blue-eyed soul, dance music, rock, and varied styles, they've released four studio albums, their latest being 2014's White Women."], ["img_url", "http://first-avenue.com/sites/default/files/images/events/Chromeo_TimothySacenti_2web.jpg"], ["created_at", "2015-11-06 21:00:00.060784"], ["updated_at", "2015-11-06 21:00:00.060784"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "artists_genres" ("genre_id", "artist_id") VALUES ($1, $2)[0m  [["genre_id", 15], ["artist_id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/genres/15
+Completed 302 Found in 144ms (ActiveRecord: 40.1ms)
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:00:00 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (5.6ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  Rendered genres/show.html.erb within layouts/application (24.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 219ms (Views: 191.8ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:02:01 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (1.3ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  Rendered genres/show.html.erb within layouts/application (23.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 760ms (Views: 734.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:02:02 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:02:02 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:02:02 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:02:02 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:02:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:02:02 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:02:02 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:03:00 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (0.9ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  Rendered genres/show.html.erb within layouts/application (10.0ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 522ms (Views: 501.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:03:01 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:03:01 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:03:01 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:03:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:03:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:03:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:03:01 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:14:58 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (7.1ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (49.8ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (845.1ms)
+Completed 500 Internal Server Error in 953ms (ActiveRecord: 56.9ms)
+
+ActionView::Template::Error (undefined local variable or method `genre' for #<#<Class:0x007ff9de66b7c0>:0x007ff9da48d6c8>):
+    15:       <div class="row">
+    16:         <% group.each do |artist| %>
+    17:           <% if !artist.nil? %>
+    18:             <%= link_to genre_path(genre) do %>
+    19:               <div  class="genre-item four columns">
+    20:                 <ul>
+    21:                   <li><%= artist.artist_name %></li>
+  app/views/genres/show.html.erb:18:in `block (2 levels) in _app_views_genres_show_html_erb___561502141601533105_70355596263080'
+  app/views/genres/show.html.erb:16:in `each'
+  app/views/genres/show.html.erb:16:in `block in _app_views_genres_show_html_erb___561502141601533105_70355596263080'
+  app/views/genres/show.html.erb:14:in `each'
+  app/views/genres/show.html.erb:14:in `_app_views_genres_show_html_erb___561502141601533105_70355596263080'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (135.2ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (112.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (248.4ms)
+
+
+Started POST "/genres/15/artists" for ::1 at 2015-11-06 16:17:54 -0500
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSNdaLPDRjzgKeS69xpDl0uO5QkrJ1pkwuYzHmPcEfuJD3iNOOE4WIZnCozMivF1xtLWZZeGCTCa1/h74om4RQ==", "artist"=>{"artist_name"=>"Chromeo", "img_url"=>"http://first-avenue.com/sites/default/files/images/events/Chromeo_TimothySacenti_2web.jpg", "artist_bio"=>"Chromeo is a Canadian electro-funk duo from Montreal, formed in 2002 by musicians David \"Dave 1\" Macklovitch and Patrick \"P-Thugg\" Gemayel. Featuring a sound influenced by blue-eyed soul, dance music, rock, and varied styles, they've released four studio albums, their latest being 2014's White Women."}, "commit"=>"Create Artist", "genre_id"=>"15"}
+  [1m[36mGenre Load (0.8ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "artists" ("artist_name", "artist_bio", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["artist_name", "Chromeo"], ["artist_bio", "Chromeo is a Canadian electro-funk duo from Montreal, formed in 2002 by musicians David \"Dave 1\" Macklovitch and Patrick \"P-Thugg\" Gemayel. Featuring a sound influenced by blue-eyed soul, dance music, rock, and varied styles, they've released four studio albums, their latest being 2014's White Women."], ["img_url", "http://first-avenue.com/sites/default/files/images/events/Chromeo_TimothySacenti_2web.jpg"], ["created_at", "2015-11-06 21:17:54.592915"], ["updated_at", "2015-11-06 21:17:54.592915"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "artists_genres" ("genre_id", "artist_id") VALUES ($1, $2)  [["genre_id", 15], ["artist_id", 4]]
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/genres/15
+Completed 302 Found in 116ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:17:54 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (0.6ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (0.4ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (34.6ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"artists", :genre_id=>#<Artist id: 4, artist_name: "Chromeo", artist_bio: "Chromeo is a Canadian electro-funk duo from Montre...", img_url: "http://first-avenue.com/sites/default/files/images...", created_at: "2015-11-06 21:17:54", updated_at: "2015-11-06 21:17:54">, :id=>nil} missing required keys: [:id]):
+    15:       <div class="row">
+    16:         <% group.each do |artist| %>
+    17:           <% if !artist.nil? %>
+    18:             <%= link_to genre_artist_path(artist) do %>
+    19:               <div  class="genre-item four columns">
+    20:                 <ul>
+    21:                   <li><%= artist.artist_name %></li>
+  app/views/genres/show.html.erb:18:in `block (2 levels) in _app_views_genres_show_html_erb___561502141601533105_70355539030860'
+  app/views/genres/show.html.erb:16:in `each'
+  app/views/genres/show.html.erb:16:in `block in _app_views_genres_show_html_erb___561502141601533105_70355539030860'
+  app/views/genres/show.html.erb:14:in `each'
+  app/views/genres/show.html.erb:14:in `_app_views_genres_show_html_erb___561502141601533105_70355539030860'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (136.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (107.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (243.8ms)
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:18:28 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (15.2ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (6.7ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (176853.5ms)
+Completed 500 Internal Server Error in 176936ms (ActiveRecord: 21.9ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"artists", :genre_id=>4, :id=>nil} missing required keys: [:id]):
+    16:         <% group.each do |artist| %>
+    17:           <% if !artist.nil? %>
+    18:           <% binding.pry %>
+    19:             <%= link_to url: {:action=>"show", :controller=>"artists", :genre_id artist.id} do %>
+    20:               <div  class="genre-item four columns">
+    21:                 <ul>
+    22:                   <li><%= artist.artist_name %></li>
+  app/views/genres/show.html.erb:19:in `block (2 levels) in _app_views_genres_show_html_erb___561502141601533105_70355575052200'
+  app/views/genres/show.html.erb:16:in `each'
+  app/views/genres/show.html.erb:16:in `block in _app_views_genres_show_html_erb___561502141601533105_70355575052200'
+  app/views/genres/show.html.erb:14:in `each'
+  app/views/genres/show.html.erb:14:in `_app_views_genres_show_html_erb___561502141601533105_70355575052200'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (33.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (76.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (225.2ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (4.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (102.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (247.3ms)
+
+
+Started GET "/genres/15/" for ::1 at 2015-11-06 16:21:26 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (0.7ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  Rendered genres/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.7ms)
+
+SyntaxError (/Users/olegkordunskiy/WDI-MASTER/gstream_app/app/views/genres/show.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting =>
+...er=>"artists", :genre_id artist.id} do @output_buffer.safe_a...
+...                               ^
+/Users/olegkordunskiy/WDI-MASTER/gstream_app/app/views/genres/show.html.erb:19: syntax error, unexpected '}', expecting keyword_end
+..."artists", :genre_id artist.id} do @output_buffer.safe_appen...
+...                               ^
+/Users/olegkordunskiy/WDI-MASTER/gstream_app/app/views/genres/show.html.erb:34: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/genres/show.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting =>
+  app/views/genres/show.html.erb:19: syntax error, unexpected '}', expecting keyword_end
+  app/views/genres/show.html.erb:34: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (104.2ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (233.8ms)
+
+
+Started GET "/genres/15/" for ::1 at 2015-11-06 16:23:05 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (0.9ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (3.9ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (5969.0ms)
+  [1m[36mUser Load (6.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 6239ms (Views: 6198.4ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:23:12 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:23:12 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:23:12 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:23:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:23:12 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:23:12 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:23:12 -0500
+
+
+Started GET "/genres/15/artists/new" for ::1 at 2015-11-06 16:23:27 -0500
+Processing by ArtistsController#new as HTML
+  Parameters: {"genre_id"=>"15"}
+  [1m[35mGenre Load (1.0ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  Rendered artists/new.html.erb within layouts/application (5911.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 6255ms (Views: 6188.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/genres/15/artists" for ::1 at 2015-11-06 16:25:08 -0500
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s+MWoAhVMJsNbt1XN13s/gSeQDY4OTPTfL9mlpllHGR7zzNFg3dO/2sgM2EMzV4cicJzWoSYYIckjq3zGDC12g==", "artist"=>{"artist_name"=>"Skream", "img_url"=>"http://s3.amazonaws.com/images.owsla.com/2011/11/SKREAM_OWSLA_Photo1_555px.jpg", "artist_bio"=>"Oliver Dene Jones (born 1 June 1986), known as Skream, is an English electronic music producer based in Croydon.[1] Skream was an early and influential exponent of the dubstep genre.[2][3] After producing several singles, he released his first full-length album, Skream!, in 2006."}, "commit"=>"Create Artist", "genre_id"=>"15"}
+  [1m[35mGenre Load (1.4ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36m (22.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (41.9ms)[0m  INSERT INTO "artists" ("artist_name", "artist_bio", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["artist_name", "Skream"], ["artist_bio", "Oliver Dene Jones (born 1 June 1986), known as Skream, is an English electronic music producer based in Croydon.[1] Skream was an early and influential exponent of the dubstep genre.[2][3] After producing several singles, he released his first full-length album, Skream!, in 2006."], ["img_url", "http://s3.amazonaws.com/images.owsla.com/2011/11/SKREAM_OWSLA_Photo1_555px.jpg"], ["created_at", "2015-11-06 21:25:08.447302"], ["updated_at", "2015-11-06 21:25:08.447302"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "artists_genres" ("genre_id", "artist_id") VALUES ($1, $2)[0m  [["genre_id", 15], ["artist_id", 5]]
+  [1m[35m (1.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/genres/15
+Completed 302 Found in 369ms (ActiveRecord: 152.5ms)
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:25:08 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.4ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (26.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 247ms (Views: 243.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:25:38 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (1.2ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (6.3ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (90.9ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 441ms (Views: 409.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:25:39 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:25:39 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:25:39 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:25:39 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:25:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:25:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:25:39 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:25:59 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (3.1ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.7ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (124.8ms)
+  [1m[36mUser Load (7.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 429ms (Views: 386.5ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:26:00 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:26:00 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:26:00 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:26:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:26:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:26:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:26:01 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:26:18 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (1.0ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (31.3ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (90.4ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 1122ms (Views: 1054.4ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:26:20 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:26:20 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:26:20 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:26:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:26:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:26:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:26:20 -0500
+
+
+Started GET "/genres/15/artists/new" for ::1 at 2015-11-06 16:26:34 -0500
+Processing by ArtistsController#new as HTML
+  Parameters: {"genre_id"=>"15"}
+  [1m[36mGenre Load (1.1ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  Rendered artists/new.html.erb within layouts/application (37096.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 37489ms (Views: 37458.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/genres/15/artists" for ::1 at 2015-11-06 16:29:49 -0500
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LBVwvrJwWrFHuXQSG5uYhspHELum34L9QLPAtNJcQDzkOVVbOVIk1SH3miQgCypkRxsj1xp+0akYggvRUwnpgg==", "artist"=>{"artist_name"=>"Cherokee", "img_url"=>"http://images.sk-static.com/images/media/profile_images/artists/558083/huge_avatar", "artist_bio"=>"Cherokee is a french house duo formed by Terence and Dorian. Both are close friends and already worked together through the collective High Night created along with their pal Jesse. They were able to win today’s French house scene’s confidence with their respective solo projects: Darius and HYKN. Influenced by the legendary labels Roulé and Crydamoure, it didn’t take a long time for them to understand they needed to work together."}, "commit"=>"Create Artist", "genre_id"=>"15"}
+  [1m[36mGenre Load (81.1ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (32.2ms)[0m  BEGIN
+  [1m[36mSQL (88.2ms)[0m  [1mINSERT INTO "artists" ("artist_name", "artist_bio", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["artist_name", "Cherokee"], ["artist_bio", "Cherokee is a french house duo formed by Terence and Dorian. Both are close friends and already worked together through the collective High Night created along with their pal Jesse. They were able to win today’s French house scene’s confidence with their respective solo projects: Darius and HYKN. Influenced by the legendary labels Roulé and Crydamoure, it didn’t take a long time for them to understand they needed to work together."], ["img_url", "http://images.sk-static.com/images/media/profile_images/artists/558083/huge_avatar"], ["created_at", "2015-11-06 21:29:50.144496"], ["updated_at", "2015-11-06 21:29:50.144496"]]
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "artists_genres" ("genre_id", "artist_id") VALUES ($1, $2)  [["genre_id", 15], ["artist_id", 6]]
+  [1m[36m (18.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/genres/15
+Completed 302 Found in 586ms (ActiveRecord: 322.9ms)
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:29:50 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (0.9ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (4.0ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (40.0ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 609ms (Views: 599.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:31:19 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (0.9ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.7ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (160.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 770ms (Views: 744.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:31:21 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:31:21 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:31:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:31:21 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:31:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:31:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:31:21 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:31:42 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (0.4ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (12.0ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (77.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 988ms (Views: 949.3ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:31:44 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:31:44 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:31:44 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:31:44 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:31:44 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:31:44 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:31:44 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:32:41 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (1.1ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (9.5ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (147.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 542ms (Views: 477.9ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:32:45 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:32:46 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:32:46 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:32:46 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:32:46 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:32:46 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:32:46 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:33:10 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (17.6ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (5.8ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (130.8ms)
+  [1m[35mUser Load (6.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 523ms (Views: 450.7ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:33:12 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:33:12 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:33:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:33:12 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:33:12 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:33:12 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:33:12 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:34:02 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (1.5ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (12.7ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (72.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 350ms (Views: 287.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:34:04 -0500
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:34:04 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:34:04 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:34:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:34:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:34:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:34:04 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:34:38 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (0.9ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (0.6ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (109.4ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 447ms (Views: 404.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:34:39 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:34:39 -0500
+
+
+Started GET "/assets/application.self-22efc0022b41ff9fa26e4c5f3c94c913960b0f7953feddf1931d12cceab06bff.css?body=1" for ::1 at 2015-11-06 16:34:39 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:34:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:34:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:34:39 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:34:39 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:35:24 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (18.8ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (7.1ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (137.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1506ms (Views: 1420.7ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:35:27 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:35:27 -0500
+
+
+Started GET "/assets/application.self-1e19297f7dc07361762459b05b6f38190dc0a6b8f9c9fe74a8cee8d28c223bbf.css?body=1" for ::1 at 2015-11-06 16:35:27 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:35:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:35:27 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:35:27 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:35:27 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:36:24 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (5.2ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (13.8ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (140.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 1431ms (Views: 667.9ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:36:27 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:36:27 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:36:27 -0500
+
+
+Started GET "/assets/application.self-d42b29d1ff26017cfa941efcff2b7b573fb479dfb441da30c03a61986896dea5.css?body=1" for ::1 at 2015-11-06 16:36:27 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:36:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:36:27 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:36:27 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:36:56 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (4.5ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.8ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (45.1ms)
+  [1m[36mUser Load (5.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 789ms (Views: 726.4ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:36:57 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:36:57 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:36:57 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:36:57 -0500
+
+
+Started GET "/assets/application.self-d61dc115b12179d821d898241933558f649190c8fca38fe2c3a72a286e74dbeb.css?body=1" for ::1 at 2015-11-06 16:36:57 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:36:57 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:36:57 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:37:42 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (3.3ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (1.7ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (88.4ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 1022ms (Views: 970.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:37:44 -0500
+
+
+Started GET "/assets/skeleton.self-79ab75364953d8e157b9890c899544f558555d6d5041d8bc7c45c48ed3139d7a.css?body=1" for ::1 at 2015-11-06 16:37:44 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:37:44 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:37:44 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:37:44 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:37:44 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:37:44 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:39:33 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (12.6ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (3.7ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (157.5ms)
+  [1m[36mUser Load (4.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 945ms (Views: 844.6ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:39:35 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:39:35 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:39:35 -0500
+
+
+Started GET "/assets/application.self-72df9093b6fd9e2ee333ac2cba2731b778b20cd1ab35e89ba0891760a635f7df.css?body=1" for ::1 at 2015-11-06 16:39:35 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:39:35 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:39:35 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:39:35 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:40:13 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (4.5ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (9.4ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (88.9ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 941ms (Views: 883.7ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:40:15 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:40:15 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:40:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:40:15 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:40:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:40:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:40:15 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:40:58 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (7.4ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (18.1ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (161.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 723ms (Views: 607.6ms | ActiveRecord: 25.9ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:40:59 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:40:59 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:40:59 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:41:00 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:41:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:41:00 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:41:00 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:41:58 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (33.3ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (0.7ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (151.1ms)
+  [1m[35mUser Load (6.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 563ms (Views: 485.8ms | ActiveRecord: 40.1ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:42:00 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:42:00 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:42:00 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:42:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:42:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:42:00 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:42:00 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:42:20 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (6.8ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.8ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (122.1ms)
+  [1m[36mUser Load (6.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 857ms (Views: 742.5ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:42:21 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:42:22 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:42:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:42:22 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:42:22 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:42:22 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:42:22 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:44:12 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (37.4ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (37.9ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (143.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 581ms (Views: 454.9ms | ActiveRecord: 75.8ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:44:14 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:44:14 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:44:14 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:44:14 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:44:14 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:44:14 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:44:14 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:44:26 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (1.0ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.6ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (39.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 169ms (Views: 160.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:44:27 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:44:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:44:27 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:44:27 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:44:27 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:44:27 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:44:27 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:44:42 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (0.3ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (0.4ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (19.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:44:42 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:44:42 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:44:42 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:44:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:44:42 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:44:42 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:44:42 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:44:55 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.4ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (17.9ms)
+  [1m[36mUser Load (5.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 145ms (Views: 137.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:44:56 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:44:56 -0500
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:44:56 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:44:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:44:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:44:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:44:56 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:46:39 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (9.4ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (7.3ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (55.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 439ms (Views: 381.8ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:46:40 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:46:40 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:46:40 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:46:40 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:46:40 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:46:40 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:46:41 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:47:06 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (6.1ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (68.7ms)
+  [1m[36mUser Load (6.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 294ms (Views: 273.2ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:47:07 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:47:07 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:47:07 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:47:07 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:47:07 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:47:07 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:47:07 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:47:18 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (0.8ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (0.4ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (50.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 245ms (Views: 241.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:47:18 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:47:18 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:47:18 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:47:19 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:47:19 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:47:19 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:47:19 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:47:37 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (0.9ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.8ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (81.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 297ms (Views: 262.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:47:38 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:47:38 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:47:38 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:47:38 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:47:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:47:38 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:47:38 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:50:40 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (1.1ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (1.1ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (107.9ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 577ms (Views: 510.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:50:42 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:50:42 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:50:42 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:50:42 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:50:42 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:50:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:50:42 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:51:02 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (3.6ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.4ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (75.0ms)
+  [1m[36mUser Load (5.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 486ms (Views: 459.0ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:51:03 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:51:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:51:03 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:51:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:51:03 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:51:03 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:51:03 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:51:59 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (6.2ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (0.8ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (80.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 460ms (Views: 415.7ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:52:00 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:52:00 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:52:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:52:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:52:00 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:52:00 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:52:00 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:52:12 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.4ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (34.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 184ms (Views: 171.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:52:12 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:52:13 -0500
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:52:13 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:52:13 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:52:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:52:13 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:52:13 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:52:29 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (1.1ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (0.6ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered genres/show.html.erb within layouts/application (47.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 203ms (Views: 193.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:52:29 -0500
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:52:29 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:52:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:52:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:52:29 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:52:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:52:29 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-06 16:52:43 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.4ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered genres/show.html.erb within layouts/application (35.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 177ms (Views: 163.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:52:44 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:52:44 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:52:44 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:52:44 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:52:44 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:52:44 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:52:44 -0500
+
+
+Started GET "/" for ::1 at 2015-11-06 16:53:14 -0500
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (17.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (22.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 105ms (Views: 86.4ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/" for ::1 at 2015-11-06 16:53:40 -0500
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (0.8ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (15.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 219ms (Views: 216.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:53:41 -0500
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:53:41 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:53:41 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:53:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:53:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:53:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:53:41 -0500
+
+
+Started GET "/" for ::1 at 2015-11-06 16:54:04 -0500
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (6.6ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (25.9ms)
+  [1m[36mUser Load (5.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 129ms (Views: 115.2ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:54:04 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:54:04 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:54:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:54:04 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:54:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:54:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:54:04 -0500
+
+
+Started GET "/" for ::1 at 2015-11-06 16:54:15 -0500
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (12.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 109ms (Views: 107.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-06 16:54:16 -0500
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-06 16:54:16 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-06 16:54:16 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-06 16:54:16 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-06 16:54:16 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-06 16:54:16 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-06 16:54:16 -0500
+
+
+Started GET "/genres/new" for ::1 at 2015-11-06 16:54:32 -0500
+Processing by GenresController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered genres/new.html.erb within layouts/application (84.4ms)
+Completed 200 OK in 209ms (Views: 193.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/genres/new" for ::1 at 2015-11-06 16:54:37 -0500
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered genres/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 97ms (Views: 94.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/genres/new" for ::1 at 2015-11-06 16:54:39 -0500
+Processing by GenresController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered genres/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 102ms (Views: 100.4ms | ActiveRecord: 0.3ms)
