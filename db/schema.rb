@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105160542) do
+ActiveRecord::Schema.define(version: 20151106163905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artists", force: :cascade do |t|
+    t.string   "artist_name"
+    t.string   "artist_bio"
+    t.string   "img_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "artists_genres", id: false, force: :cascade do |t|
+    t.integer "genre_id"
+    t.integer "artist_id"
+  end
+
+  add_index "artists_genres", ["artist_id"], name: "index_artists_genres_on_artist_id", using: :btree
+  add_index "artists_genres", ["genre_id"], name: "index_artists_genres_on_genre_id", using: :btree
 
   create_table "genres", force: :cascade do |t|
     t.string   "genre_name"
@@ -26,6 +42,17 @@ ActiveRecord::Schema.define(version: 20151105160542) do
   end
 
   add_index "genres", ["user_id"], name: "index_genres_on_user_id", using: :btree
+
+  create_table "songs", force: :cascade do |t|
+    t.string  "song_name"
+    t.string  "song_comment"
+    t.string  "scloud_embed"
+    t.integer "genre_id"
+    t.integer "artist_id"
+  end
+
+  add_index "songs", ["artist_id"], name: "index_songs_on_artist_id", using: :btree
+  add_index "songs", ["genre_id"], name: "index_songs_on_genre_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "user_name"
