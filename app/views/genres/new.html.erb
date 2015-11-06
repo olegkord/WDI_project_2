@@ -1,26 +1,30 @@
-<h5>Add Genre:</h5>
 
-<% if @genre.errors.any? %>
-  <div id="error_message">
-    <h2>
-      <%= pluralize(@genre.errors.count,"error")%>
-      prevented this article from saving
-    </h2>
+<div class = "row">
+  <div class ="six columns offset-by-three">
+    <h5>Add Genre:</h5>
+    <% if @genre.errors.any? %>
+      <div id="error_message">
+        <h2>
+          <%= pluralize(@genre.errors.count,"error")%>
+          prevented this article from saving
+        </h2>
+        <ul>
+          <% @genre.errors.full_messages.each do |msg| %>
+            <li>
+              <%= msg %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <ul>
-      <% @genre.errors.full_messages.each do |msg| %>
-        <li>
-          <%= msg %>
-        </li>
-      <% end %>
+    <%= form_for @genre, url: '/genres', method: :post do |f| %>
+      <li>Genre Name: <%= f.text_field :genre_name %></li>
+      <li>Image URL: <%= f.text_field :img_url %></li>
+      <li>Description: <%= f.text_field :genre_description%></li>
+      <li><%= f.submit "Add Genre" %></li>
     </ul>
+    <% end %>
   </div>
-<% end %>
-
-<ul>
-<%= form_for @genre, url: '/genres', method: :post do |f| %>
-  <li>Genre Name: <%= f.text_field :genre_name %></li>
-  <li>Image URL: <%= f.text_field :img_url %></li>
-  <li>Description: <%= f.text_field :genre_description%></li>
-  <li><%= f.submit "Add Genre" %></li>
-</ul>
-<% end %>
+</div>
