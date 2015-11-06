@@ -22,6 +22,7 @@ class GenresController < ApplicationController
 
   def show
     @genre = Genre.find(params[:id])
+    binding.pry
     @artists = Artist.all
   end
 
