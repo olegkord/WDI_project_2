@@ -11,9 +11,9 @@ class GenresController < ApplicationController
   end
 
   def create
-    genre = Genre.new(genre_params)
-    genre.user_id = current_user.id
-    if genre.save
+    @genre = Genre.new(genre_params)
+    @genre.user_id = current_user.id
+    if @genre.save
       redirect_to '/genres'
     else
       render 'new'

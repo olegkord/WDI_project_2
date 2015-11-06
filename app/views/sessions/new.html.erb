@@ -17,7 +17,7 @@
       <div id="error_message">
         <h5>
           <%= pluralize(@user.errors.count,"error")%>
-          prevented this article from saving
+          prevented this save
         </h5>
         <ul>
           <% @user.errors.full_messages.each do |msg| %>

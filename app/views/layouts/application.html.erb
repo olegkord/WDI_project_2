@@ -17,7 +17,8 @@
     <ul class="nav-menu six columns offset-by-three">
       <li><%= link_to_if(!current_user, "Log in", login_path) %></li>
       <li><%= link_to_if(current_user, "Log out", logout_path, data: {confirm: "Are you sure?"} ) %></li>
-      <li><%= link_to_if(!current_user, "Sign up", users_new_path)  %></li>
+      <li><%= link_to_if(!current_user, "Sign up", users_new_path) %></li>
+      <li><%= link_to "Home", root_path %></li>
     </ul>
 </div>
   <%= yield %>
