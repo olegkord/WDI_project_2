@@ -4,9 +4,7 @@
 <!-- ERROR HANDLER -->
     <% if @user.nil? %>
     <!-- CHECK INCORRECT USERNAME -->
-      <div id="error_message">
-        <h5>Invalid user name.</h5>
-      </div>
+
     <% elsif @user[:password_digest] != params[:authenticity_token] %>
     <!-- CHECK INCORRECT PASSWORD -->
       <div id="error_message">
@@ -17,7 +15,7 @@
       <div id="error_message">
         <h5>
           <%= pluralize(@user.errors.count,"error")%>
-          prevented this save
+          prevented this form from saving
         </h5>
         <ul>
           <% @user.errors.full_messages.each do |msg| %>
