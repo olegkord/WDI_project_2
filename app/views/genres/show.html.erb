@@ -15,7 +15,7 @@
       <div class="row">
         <% group.each do |artist| %>
           <% if !artist.nil? %>
-            <%= link_to url: {:action=>"show", :controller=>"artists", :genre_id => @genre.id} do %>
+            <%= link_to genre_artist_path(@genre.id,artist.id) do %>
               <div  class="artist-item three columns offset-by-one">
                 <ul>
                   <li><%= artist.artist_name %></li>

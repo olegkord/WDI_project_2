@@ -16,8 +16,11 @@ class ArtistsController < ApplicationController
     else
       render 'new'
     end
+  end
 
-
+  def show
+    @artist = Artist.find(params[:id])
+    @genre = Genre.find(params[:genre_id])
   end
 
 

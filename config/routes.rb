@@ -10,7 +10,9 @@ Rails.application.routes.draw do
    get  '/logout'=> 'sessions#destroy'
 
    resources :genres do
-     resources :artists
+     resources :artists do
+       resources :songs
+     end
    end
 
   #  get  '/genres' => 'genres#index'
