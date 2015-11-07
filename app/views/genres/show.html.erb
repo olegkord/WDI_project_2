@@ -10,21 +10,20 @@
 </div>
 
 <div class="row">
-
+  <% if !@artists.nil? %>
     <% @artists.in_groups_of(3).each do |group| %>
       <div class="row">
         <% group.each do |artist| %>
-          <% if !artist.nil? %>
             <%= link_to url: {:action=>"show", :controller=>"artists", :genre_id => @genre.id} do %>
               <div  class="artist-item three columns offset-by-one">
                 <ul>
                   <li><%= artist.artist_name %></li>
-                  <li><%= image_tag("#{artist.img_url}", size: "200")%></li>
+                  <li><%= image_tag("#{artist.img_url}")%></li>
                 </ul>
               </div>
             <% end %>
-          <% end %>
         <%end%>
       </div>
     <% end %>
+  <% end %>
 </div>

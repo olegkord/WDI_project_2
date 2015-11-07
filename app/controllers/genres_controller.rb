@@ -22,8 +22,13 @@ class GenresController < ApplicationController
 
   def show
     @genre = Genre.find(params[:id])
-    binding.pry
-    @artists = Artist.all
+    all_artists = Artist.all
+    @artists = []
+    all_artists.each do |artist|
+      if artist.genres.any? {|genre| genre.id == @genre.id }
+        @artists << artist
+      end
+    end
   end
 
   private
