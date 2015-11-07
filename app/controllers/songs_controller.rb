@@ -7,11 +7,21 @@ class SongsController < ApplicationController
   end
 
   def create
+    @song = Song.new(song_params)
 
+    if @song.save
+      redirect_to genre_artist_path(@song.artist_id)
+    else
+      redner 'new'
+    end
   end
 
   private
   def song_params
-
+    params.require(:song).permit(
+      :song_name,
+      :song_comment,
+      :scloud_embed
+    )
   end
 end
