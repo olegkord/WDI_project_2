@@ -6,7 +6,7 @@
         <%= link_to genre_path(genre) do %>
           <div  class="genre-item three columns offset-by-one">
             <ul>
-              <li><%= genre.genre_name %></li>
+              <li><h4><%= genre.genre_name %></h4></li>
               <li><%= image_tag("#{genre.img_url}", class: "genre_image", size: "150")%></li>
               <li><%= genre.genre_description%></li>
             </ul>

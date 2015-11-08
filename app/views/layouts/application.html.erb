@@ -5,15 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div class="container">
+
   <header>
+    <h1>G Stream</h1>
     <% if current_user %>
       signed in as <%= current_user.user_name %>
     <% end %>
   </header>
 
+<div class="container">
   <div class = "row">
       <ul class="nav-menu six columns offset-by-three">
         <li><%= link_to_if(!current_user, "Log in", login_path) %></li>
