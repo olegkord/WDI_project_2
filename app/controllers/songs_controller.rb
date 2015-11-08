@@ -21,6 +21,15 @@ class SongsController < ApplicationController
     @song = Song.find(params["id"])
   end
 
+  def update
+    @song = Song.find(params["id"])
+    if @song.update(song_params)
+      redirect_to genre_artist_path(@song.id, params["artist_id"])
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
 
   end
