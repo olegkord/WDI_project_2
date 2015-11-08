@@ -17,7 +17,7 @@
         <li><%= song.song_comment %></li>
         <% if current_user.id == song.user_id %>
           <li><%= link_to "EDIT SONG", edit_genre_artist_song_path(@genre.id,@artist.id,song.id) %>
-              <%= link_to "DELETE SONG", genre_artist_song_path(@genre.id,@artist.id,song.id), method: :destroy, data: {confirm: "Are you sure?"} %></li>
+              <%= link_to "DELETE SONG", genre_artist_song_path(@genre.id,@artist.id,song.id), method: :delete, data: {confirm: "Are you sure?"} %></li>
         <% end %>
       <% end %>
     </ul>

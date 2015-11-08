@@ -8,7 +8,6 @@ class SongsController < ApplicationController
     @song = Song.new(song_params)
     @song.artist_id = params["artist_id"]
     @song.genre_id = params["genre_id"]
-    binding.pry
     @song.user_id = current_user.id
     if @song.save
       redirect_to genre_artist_path(@song.id, params["artist_id"])
@@ -31,7 +30,9 @@ class SongsController < ApplicationController
   end
 
   def destroy
-
+    song = Song.find(params["id"])
+    song.destroy
+    redirect_to genre_artist_path(params["genre_id"],params["artist_id"])
   end
 
   private

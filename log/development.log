@@ -23453,3 +23453,613 @@ Processing by ArtistsController#show as HTML
   [1m[36mSong Load (0.8ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = 7[0m
   Rendered artists/show.html.erb within layouts/application (5.1ms)
 Completed 200 OK in 189ms (Views: 150.7ms | ActiveRecord: 13.7ms)
+
+
+Started POST "/genres/7/artists/7/songs/20" for ::1 at 2015-11-08 13:12:31 -0500
+
+ActionController::RoutingError (No route matches [POST] "/genres/7/artists/7/songs/20"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (18.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (46.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (287.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (120.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (266.7ms)
+
+
+Started GET "/genres/20/artists/7" for ::1 at 2015-11-08 13:13:20 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"20", "id"=>"7"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.6ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSong Exists (0.5ms)[0m  SELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36mSong Load (0.3ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35mGenre Load (0.4ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSong Load (6.8ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = 7
+  Rendered artists/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 705ms (Views: 159.4ms | ActiveRecord: 43.1ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-08 13:13:21 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-08 13:13:21 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-08 13:13:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-08 13:13:22 -0500
+
+
+Started GET "/assets/application.self-032c2a1b67d1cf8b127b914f8025c0879e78171f662641c914f01a83c1c899c4.css?body=1" for ::1 at 2015-11-08 13:13:22 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-08 13:13:22 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-08 13:13:22 -0500
+
+
+Started DELETE "/genres/7/artists/7/songs/20" for ::1 at 2015-11-08 13:13:28 -0500
+Processing by SongsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Idc9I1decFtJEUY5zULdjHAIeNEpg7uFgmbsKTjabsbp+xjG3HwOPy9fqA/20m9u/VRLvZUi6NHaVydMuY/HeA==", "genre_id"=>"7", "artist_id"=>"7", "id"=>"20"}
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template songs/destroy, application/destroy with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/olegkordunskiy/WDI-MASTER/gstream_app/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (45.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (492.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (214.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (462.4ms)
+
+
+Started DELETE "/genres/7/artists/7/songs/19" for ::1 at 2015-11-08 13:15:04 -0500
+Processing by SongsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Idc9I1decFtJEUY5zULdjHAIeNEpg7uFgmbsKTjabsbp+xjG3HwOPy9fqA/20m9u/VRLvZUi6NHaVydMuY/HeA==", "genre_id"=>"7", "artist_id"=>"7", "id"=>"19"}
+  [1m[36mSong Load (1.3ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (17.1ms)[0m  [1mDELETE FROM "songs" WHERE "songs"."id" = $1[0m  [["id", 19]]
+  [1m[35m (5.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/genres/19/artists/7
+Completed 302 Found in 136ms (ActiveRecord: 42.2ms)
+
+
+Started GET "/genres/19/artists/7" for ::1 at 2015-11-08 13:15:05 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"19", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (1.3ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSong Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mGenre Load (0.4ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 19]]
+Completed 404 Not Found in 173ms (ActiveRecord: 24.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Genre with 'id'=19):
+  app/controllers/artists_controller.rb:25:in `show'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (37.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (235.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.2ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (159.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (334.9ms)
+
+
+Started GET "/genres/7/" for ::1 at 2015-11-08 13:15:40 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGenre Load (0.4ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mArtist Load (0.5ms)[0m  SELECT "artists".* FROM "artists"
+  [1m[36mGenre Load (17.2ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 4]]
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 5]]
+  [1m[36mGenre Load (0.7ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 6]]
+  [1m[35mGenre Load (6.5ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 7]]
+  Rendered genres/show.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 427ms (Views: 138.4ms | ActiveRecord: 70.1ms)
+
+
+Started GET "/genres/7/artists/7" for ::1 at 2015-11-08 13:15:44 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"7", "id"=>"7"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.3ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSong Exists (0.3ms)[0m  SELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mGenre Load (0.4ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSong Load (0.7ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = 7
+  Rendered artists/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 17645ms (Views: 137.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/genres/7/artists/7" for ::1 at 2015-11-08 13:16:02 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"7", "id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSong Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mGenre Load (0.4ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSong Load (0.5ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = 7[0m
+  Rendered artists/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 2189ms (Views: 115.7ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/genres/7/artists/7/songs/20" for ::1 at 2015-11-08 13:16:15 -0500
+Processing by SongsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DE//rhQ45fiFrINVvuWoTuc4+GmMKfCXiPD9D1RSMWDEY9pLnxqbnOPibWOFdRqsamTLBTCIo8PQwTZq1QeY3g==", "genre_id"=>"7", "artist_id"=>"7", "id"=>"20"}
+  [1m[35mSong Load (0.4ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "songs" WHERE "songs"."id" = $1  [["id", 20]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/genres/20/artists/7
+Completed 302 Found in 29ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/genres/20/artists/7" for ::1 at 2015-11-08 13:16:15 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"20", "id"=>"7"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.3ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSong Exists (0.3ms)[0m  SELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36mGenre Load (0.9ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 20]]
+Completed 404 Not Found in 41547ms (ActiveRecord: 2.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Genre with 'id'=20):
+  app/controllers/artists_controller.rb:26:in `show'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (167.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (4.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (160.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (401.6ms)
+
+
+Started DELETE "/genres/7/artists/7/songs/20" for ::1 at 2015-11-08 13:17:09 -0500
+Processing by SongsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DE//rhQ45fiFrINVvuWoTuc4+GmMKfCXiPD9D1RSMWDEY9pLnxqbnOPibWOFdRqsamTLBTCIo8PQwTZq1QeY3g==", "genre_id"=>"7", "artist_id"=>"7", "id"=>"20"}
+  [1m[35mSong Load (1.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 20]]
+Completed 404 Not Found in 390ms (ActiveRecord: 29.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Song with 'id'=20):
+  app/controllers/songs_controller.rb:34:in `destroy'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (160.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (728.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (913.7ms)
+
+
+Started GET "/genres/7/artists/7/" for ::1 at 2015-11-08 13:17:25 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"7", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.3ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSong Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mGenre Load (0.4ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSong Load (6.4ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = 7[0m
+  Rendered artists/show.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 6238ms (Views: 163.5ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/genres/7/artists/7/songs/new" for ::1 at 2015-11-08 13:17:44 -0500
+Processing by SongsController#new as HTML
+  Parameters: {"genre_id"=>"7", "artist_id"=>"7"}
+  [1m[35mArtist Load (1.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mGenre Load (0.5ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered songs/new.html.erb within layouts/application (138.4ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 427ms (Views: 395.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/genres/7/artists/7/songs" for ::1 at 2015-11-08 13:18:35 -0500
+Processing by SongsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C7hF7uC7dmNsaZgVel2OKjfbfZoVQM5zSINJfHVPnMXDlGALa5kIBwondiNBzTzIuodO9qnhnScQsoIZ9Bo1ew==", "song"=>{"song_name"=>"Bloom", "scloud_embed"=>"<iframe width=\"100%\" height=\"300\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/186968313&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>", "song_comment"=>"yay"}, "commit"=>"Add Song", "genre_id"=>"7", "artist_id"=>"7"}
+  [1m[36mUser Load (484.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (2.0ms)[0m  BEGIN
+  [1m[36mSQL (297.8ms)[0m  [1mINSERT INTO "songs" ("song_name", "song_comment", "scloud_embed", "artist_id", "genre_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["song_name", "Bloom"], ["song_comment", "yay"], ["scloud_embed", "<iframe width=\"100%\" height=\"300\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/186968313&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>"], ["artist_id", 7], ["genre_id", 7], ["user_id", 1]]
+  [1m[35m (1.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/genres/21/artists/7
+Completed 302 Found in 9502ms (ActiveRecord: 785.5ms)
+
+
+Started GET "/genres/21/artists/7" for ::1 at 2015-11-08 13:18:45 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"21", "id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.4ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSong Exists (21.8ms)[0m  [1mSELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mSong Load (0.6ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mGenre Load (4.6ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSong Load (36.9ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = 7[0m
+  Rendered artists/show.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 312ms (Views: 193.7ms | ActiveRecord: 64.8ms)
+
+
+Started DELETE "/genres/7/artists/7/songs/21" for ::1 at 2015-11-08 13:18:57 -0500
+Processing by SongsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"trDrkG0d22qD3BkVzIIoAV4HglSG9yZB9rmYDrzv72B+nM515j+lDuWS9yP3Eprj01uxODpWdRWuiFNrPbpG3g==", "genre_id"=>"7", "artist_id"=>"7", "id"=>"21"}
+  [1m[35mSong Load (2.5ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (20.6ms)[0m  DELETE FROM "songs" WHERE "songs"."id" = $1  [["id", 21]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 23.9ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :artist_id=>"7", :controller=>"artists", :genre_id=>"7", :id=>nil} missing required keys: [:id]):
+  app/controllers/songs_controller.rb:37:in `destroy'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (30.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1123.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (9.4ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (3.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.7ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (307.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (7.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (687.2ms)
+
+
+Started GET "/genres/7/artists/7" for ::1 at 2015-11-08 13:19:48 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"7", "id"=>"7"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.4ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSong Exists (0.4ms)[0m  SELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mGenre Load (7.1ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSong Load (7.2ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = 7
+  Rendered artists/show.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 4608ms (Views: 251.6ms | ActiveRecord: 108.6ms)
+
+
+Started GET "/genres/7/artists/7/songs/new" for ::1 at 2015-11-08 13:20:13 -0500
+Processing by SongsController#new as HTML
+  Parameters: {"genre_id"=>"7", "artist_id"=>"7"}
+  [1m[36mArtist Load (6.6ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mGenre Load (1.0ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered songs/new.html.erb within layouts/application (66.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 388ms (Views: 360.5ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/genres/7/artists/7/songs" for ::1 at 2015-11-08 13:20:21 -0500
+Processing by SongsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gr6ZKzF2YeXLVtenQIl6ZPeSg71RSVE+/9pqmNKWXGbSkrzOulQfga0YOZF7GciGes6w0e3oAmqn66H9U8P12A==", "song"=>{"song_name"=>"Bloom", "scloud_embed"=>"<iframe width=\"100%\" height=\"300\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/186968313&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>", "song_comment"=>"comment"}, "commit"=>"Add Song", "genre_id"=>"7", "artist_id"=>"7"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.6ms)[0m  INSERT INTO "songs" ("song_name", "song_comment", "scloud_embed", "artist_id", "genre_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["song_name", "Bloom"], ["song_comment", "comment"], ["scloud_embed", "<iframe width=\"100%\" height=\"300\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/186968313&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>"], ["artist_id", 7], ["genre_id", 7], ["user_id", 1]]
+  [1m[36m (5.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/genres/22/artists/7
+Completed 302 Found in 4686ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/genres/22/artists/7" for ::1 at 2015-11-08 13:20:26 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"22", "id"=>"7"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.3ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSong Exists (0.4ms)[0m  SELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mSong Load (0.4ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mGenre Load (0.5ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSong Load (0.7ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = 7
+  Rendered artists/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 198ms (Views: 157.3ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/genres/7/artists/7/songs/22" for ::1 at 2015-11-08 13:20:58 -0500
+Processing by SongsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jRgOkG0YgiNkotznsKYGcjTtZv6/Il/kGiOMit74CbJFNCt15jr8RwLsMtGLNrSQubFVkgODDLBCEkfvX62gDA==", "genre_id"=>"7", "artist_id"=>"7", "id"=>"22"}
+  [1m[36mSong Load (0.5ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35m (22.9ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "songs" WHERE "songs"."id" = $1[0m  [["id", 22]]
+  [1m[35m (8.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/genres/7/artists/22
+Completed 302 Found in 53373ms (ActiveRecord: 81.1ms)
+
+
+Started GET "/genres/7/artists/22" for ::1 at 2015-11-08 13:21:52 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"7", "id"=>"22"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.4ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 22]]
+Completed 404 Not Found in 136ms (ActiveRecord: 25.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=22):
+  app/controllers/artists_controller.rb:22:in `show'
+
+
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (159.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.1ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (161.9ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.6ms)
+  Rendered /Users/olegkordunskiy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (372.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-08 13:22:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (6.1ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (58.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 455ms (Views: 386.4ms | ActiveRecord: 32.3ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-08 13:22:26 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-08 13:22:26 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-08 13:22:26 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-08 13:22:26 -0500
+
+
+Started GET "/assets/application.self-032c2a1b67d1cf8b127b914f8025c0879e78171f662641c914f01a83c1c899c4.css?body=1" for ::1 at 2015-11-08 13:22:26 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-08 13:22:26 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-08 13:22:27 -0500
+
+
+Started GET "/genres/7" for ::1 at 2015-11-08 13:22:29 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGenre Load (6.7ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mArtist Load (12.7ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  [1m[35mGenre Load (0.8ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 4]]
+  [1m[36mGenre Load (0.7ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 5]]
+  [1m[35mGenre Load (0.7ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 6]]
+  [1m[36mGenre Load (0.7ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 7]]
+  Rendered genres/show.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 156ms (Views: 65.5ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/genres/7/artists/7" for ::1 at 2015-11-08 13:22:31 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"7", "id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.3ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSong Exists (7.0ms)[0m  [1mSELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mGenre Load (0.4ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSong Load (0.5ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = 7[0m
+  Rendered artists/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 117ms (Views: 89.8ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/genres/7/artists/7/songs/new" for ::1 at 2015-11-08 13:22:37 -0500
+Processing by SongsController#new as HTML
+  Parameters: {"genre_id"=>"7", "artist_id"=>"7"}
+  [1m[35mArtist Load (1.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mGenre Load (0.6ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered songs/new.html.erb within layouts/application (246.8ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 496ms (Views: 478.0ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/genres/7/artists/7/songs" for ::1 at 2015-11-08 13:22:53 -0500
+Processing by SongsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nH0g3mVmOX6XvaJnVF9HluJNY+VJOaRMjBTC2o0g4DNUUQU77kRHGvHzTFFvz/V0bxFQifWY9xjUJQm/DHVJjQ==", "song"=>{"song_name"=>"Bloom", "scloud_embed"=>"<iframe width=\"100%\" height=\"300\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/186968313&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>", "song_comment"=>"GOOD"}, "commit"=>"Add Song", "genre_id"=>"7", "artist_id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (11.5ms)[0m  [1mINSERT INTO "songs" ("song_name", "song_comment", "scloud_embed", "artist_id", "genre_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["song_name", "Bloom"], ["song_comment", "GOOD"], ["scloud_embed", "<iframe width=\"100%\" height=\"300\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/186968313&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>"], ["artist_id", 7], ["genre_id", 7], ["user_id", 1]]
+  [1m[35m (3.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/genres/23/artists/7
+Completed 302 Found in 8279ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/genres/23/artists/7" for ::1 at 2015-11-08 13:23:01 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"23", "id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.4ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSong Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mSong Load (0.3ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 23]]
+  [1m[36mGenre Load (0.5ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSong Load (0.5ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = 7[0m
+  Rendered artists/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 124ms (Views: 95.5ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/genres/7/artists/7/songs/23" for ::1 at 2015-11-08 13:23:24 -0500
+Processing by SongsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SGtfWFSXQT4Eokn5JiCVuMgcvPi9ihOZ/JqbxRACnXqAR3q937U/WmLsp88dsCdaRUCPlAErQM2kq1CgkVc0xA==", "genre_id"=>"7", "artist_id"=>"7", "id"=>"23"}
+  [1m[35mSong Load (0.6ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 23]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "songs" WHERE "songs"."id" = $1  [["id", 23]]
+  [1m[36m (11.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/genres/7/artists/7
+Completed 302 Found in 128ms (ActiveRecord: 29.1ms)
+
+
+Started GET "/genres/7/artists/7" for ::1 at 2015-11-08 13:23:25 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"genre_id"=>"7", "id"=>"7"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.5ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSong Exists (0.4ms)[0m  SELECT  1 AS one FROM "songs" WHERE "songs"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mGenre Load (0.5ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mSong Load (0.6ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = 7
+  Rendered artists/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 237ms (Views: 112.8ms | ActiveRecord: 8.4ms)
