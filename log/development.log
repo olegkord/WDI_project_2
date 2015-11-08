@@ -22383,3 +22383,244 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 
 
 Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-08 12:35:22 -0500
+
+
+Started GET "/genres/7" for ::1 at 2015-11-08 12:37:38 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGenre Load (6.9ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mArtist Load (0.8ms)[0m  SELECT "artists".* FROM "artists"
+  [1m[36mGenre Load (0.6ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 4]]
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 5]]
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 6]]
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 7]]
+  Rendered genres/show.html.erb within layouts/application (28.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 398ms (Views: 167.0ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-08 12:37:39 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-08 12:37:39 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-08 12:37:39 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-08 12:37:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-08 12:37:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-08 12:37:39 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-08 12:37:39 -0500
+
+
+Started GET "/genres/7" for ::1 at 2015-11-08 12:39:32 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mGenre Load (4.2ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mArtist Load (7.5ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  [1m[35mGenre Load (6.8ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 4]]
+  [1m[36mGenre Load (6.5ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 5]]
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 6]]
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 7]]
+  Rendered genres/show.html.erb within layouts/application (11.7ms)
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 566ms (Views: 323.7ms | ActiveRecord: 27.6ms)
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-08 12:39:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-08 12:39:34 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-08 12:39:34 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-08 12:39:34 -0500
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-08 12:39:34 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-08 12:39:34 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-08 12:39:34 -0500
+
+
+Started GET "/genres/7" for ::1 at 2015-11-08 12:43:23 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGenre Load (34.0ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mArtist Load (31.8ms)[0m  SELECT "artists".* FROM "artists"
+  [1m[36mGenre Load (4.4ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 4]]
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 5]]
+  [1m[36mGenre Load (0.4ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 6]]
+  [1m[35mGenre Load (3.6ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 7]]
+  Rendered genres/show.html.erb within layouts/application (23.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 643ms (Views: 457.2ms | ActiveRecord: 75.2ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-08 12:43:25 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-08 12:43:25 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-08 12:43:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-08 12:43:26 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-08 12:43:26 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-08 12:43:26 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-08 12:43:26 -0500
+
+
+Started GET "/" for ::1 at 2015-11-08 12:43:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (11.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (6.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (62.8ms)
+  [1m[36mUser Load (6.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 422ms (Views: 332.6ms | ActiveRecord: 55.5ms)
+
+
+Started GET "/genres/15" for ::1 at 2015-11-08 12:44:02 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (0.4ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (6.8ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  [1m[35mGenre Load (0.8ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 4]]
+  [1m[36mGenre Load (0.4ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 5]]
+  [1m[35mGenre Load (0.7ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 6]]
+  [1m[36mGenre Load (0.6ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 7]]
+  Rendered genres/show.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 319ms (Views: 90.5ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/genres/15" for ::1 at 2015-11-08 12:45:23 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (36.3ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (5.9ms)[0m  SELECT "artists".* FROM "artists"
+  [1m[36mGenre Load (11.2ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 4]]
+  [1m[35mGenre Load (0.6ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 5]]
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 6]]
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 7]]
+  Rendered genres/show.html.erb within layouts/application (27.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 569ms (Views: 410.3ms | ActiveRecord: 55.2ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-08 12:45:24 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-08 12:45:24 -0500
+
+
+Started GET "/assets/application.self-3303ea3fc1623ce9350b126a0b7efb0f497a6def0ca0435e37b91012ea08675c.css?body=1" for ::1 at 2015-11-08 12:45:24 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-08 12:45:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-08 12:45:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-08 12:45:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-08 12:45:24 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-08 12:46:42 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mGenre Load (14.5ms)[0m  SELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mArtist Load (0.6ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  [1m[35mGenre Load (0.7ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 4]]
+  [1m[36mGenre Load (0.4ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 5]]
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 6]]
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 7]]
+  Rendered genres/show.html.erb within layouts/application (7.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 400ms (Views: 308.9ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-08 12:46:43 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-08 12:46:43 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-08 12:46:43 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-08 12:46:43 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-08 12:46:43 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-08 12:46:43 -0500
+
+
+Started GET "/assets/application.self-5c158bd909024440d38a98ce671d9879badd837cd805885aff05faa91b01ef59.css?body=1" for ::1 at 2015-11-08 12:46:43 -0500
+
+
+Started GET "/genres/15" for ::1 at 2015-11-08 12:47:19 -0500
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mGenre Load (0.4ms)[0m  [1mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mArtist Load (0.3ms)[0m  SELECT "artists".* FROM "artists"
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 4]]
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 5]]
+  [1m[36mGenre Load (0.4ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1[0m  [["artist_id", 6]]
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres" INNER JOIN "artists_genres" ON "genres"."id" = "artists_genres"."genre_id" WHERE "artists_genres"."artist_id" = $1  [["artist_id", 7]]
+  Rendered genres/show.html.erb within layouts/application (12.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 222ms (Views: 203.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/normalize-rails.self-6cb7d8f33baf77b32fd83627cc64e440e110058b8e0d2c95f103936e7620c5b9.css?body=1" for ::1 at 2015-11-08 12:47:20 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-08 12:47:20 -0500
+
+
+Started GET "/assets/application.self-8ece965a35f391d2f484c1a15172e361c30851b85b465a0d7b01db6db6204ba2.css?body=1" for ::1 at 2015-11-08 12:47:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-08 12:47:20 -0500
+
+
+Started GET "/assets/skeleton.self-ebe9eeafa1d23dca4fd5c4bbdd3e58affc29d3f34840dacd057a286f1f218c34.css?body=1" for ::1 at 2015-11-08 12:47:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-08 12:47:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-08 12:47:20 -0500
+
+
+Started GET "/" for ::1 at 2015-11-08 12:47:28 -0500
+Processing by GenresController#index as HTML
+  [1m[35mGenre Load (0.5ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered genres/index.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 69ms (Views: 67.3ms | ActiveRecord: 0.9ms)

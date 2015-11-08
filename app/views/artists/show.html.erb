@@ -2,7 +2,7 @@
   <div class="eight columns offset-by-two">
     <h1><%=@artist.artist_name%></h1>
     <ul>
-      <li><%= image_tag("#{@artist.img_url}", size: "400")%></li>
+      <li><%= image_tag("#{@artist.img_url}"%></li>
       <li><%=@artist.artist_bio%></li>
     </ul>
     <%= link_to "Add a song", new_genre_artist_song_path(@genre.id,@artist.id)%>
