@@ -20,7 +20,7 @@ body {
 }
 
 div {
-  border: solid black 2px;
+  color: darkgrey;
   text-align: center;
 }
 
@@ -47,14 +47,21 @@ h1 {
   font-family: 'Sonsie One', cursive;
 }
 .container {
+  border: solid black 2px;
   background-color: #FFCC99;
+}
+
+input {
+  background-color: pink;
 }
 .nav-menu li {
   display: inline;
   list-item: none;
   padding: 20px;
 }
-
+.row {
+  line-height:15px;
+}
 .genre-item {
   height: 300px;
 }
