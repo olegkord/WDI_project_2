@@ -4,9 +4,7 @@
     <ul>
       <li><%= image_tag("#{@artist.img_url}", size: "400")%></li>
       <li><%=@artist.artist_bio%></li>
-
     </ul>
-    <% binding.pry %>
     <%= link_to "Add a song", new_genre_artist_song_path(@genre.id,@artist.id)%>
   </div>
 </div>
@@ -17,6 +15,10 @@
       <% @songs.each do |song| %>
         <li><%= "#{song.scloud_embed}".html_safe %></li>
         <li><%= song.song_comment %></li>
+        <% if current_user.id == song.user_id %>
+          <li><%= link_to "EDIT SONG", edit_genre_artist_song_path(@genre.id,@artist.id,song.id) %>
+              <%= link_to "DELETE SONG", genre_artist_song_path(@genre.id,@artist.id,song.id), method: :destroy, data: {confirm: "Are you sure?"} %></li>
+        <% end %>
       <% end %>
     </ul>
   </div>

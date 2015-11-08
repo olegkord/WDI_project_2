@@ -2,6 +2,7 @@ class Song < ActiveRecord::Base
 
   belongs_to :artist
   belongs_to :genre
+  belongs_to :user
 
   validates :song_name, presence: true
   validates :scloud_embed, presence: true

@@ -8,7 +8,8 @@ class SongsController < ApplicationController
     @song = Song.new(song_params)
     @song.artist_id = params["artist_id"]
     @song.genre_id = params["genre_id"]
-
+    binding.pry
+    @song.user_id = current_user.id
     if @song.save
       # redirect_to {
       #   controller: "artists",
@@ -21,6 +22,14 @@ class SongsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def edit
+
+  end
+
+  def destroy
+
   end
 
   private
