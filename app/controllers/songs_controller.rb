@@ -11,13 +11,6 @@ class SongsController < ApplicationController
     binding.pry
     @song.user_id = current_user.id
     if @song.save
-      # redirect_to {
-      #   controller: "artists",
-      #   action: "show",
-      #   song_id: "@song.id",
-      #   id: "#{params["artist_id"]}",
-      #   genre_id: "#{params["genre_id"]}"
-      # }
       redirect_to genre_artist_path(@song.id, params["artist_id"])
     else
       render 'new'
@@ -25,7 +18,7 @@ class SongsController < ApplicationController
   end
 
   def edit
-
+    binding.pry
   end
 
   def destroy

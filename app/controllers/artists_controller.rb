@@ -20,9 +20,11 @@ class ArtistsController < ApplicationController
 
   def show
     @artist = Artist.find(params["id"])
-    if @artist.songs.nil?
+
+    if @artist.songs.nil? || !Song.exists?(params["genre_id"])
       @genre = Genre.find(params["genre_id"])
     else
+      binding.pry
       current_song = Song.find(params["genre_id"]) #<-- this is a bug.
       genre_id = current_song.genre.id
       @genre = Genre.find(genre_id)
