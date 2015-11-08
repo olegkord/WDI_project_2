@@ -10,7 +10,7 @@
 <body>
 
   <header>
-    <h1>G Stream</h1>
+    <h1><%= link_to "G Stream", root_path %></h1>
     <% if current_user %>
       signed in as <%= current_user.user_name %>
     <% end %>
