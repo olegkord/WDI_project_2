@@ -1,10 +1,9 @@
 
 <div class="row">
-  <h3> Add a Song </h3>
+  <h3> Edit Song info</h3>
   <div class="six columns offset-by-three">
 
     <h1>G Stream</h1>
-    <% binding.pry %>
     <% #INCLUDE BECAUSE THE FORM FOR REQUIRES THESE VARIABLES IN CASE OF RE-RENDER %>
     <%  @artist = Artist.find(params["artist_id"]) %>
     <%  @genre = Genre.find(params["genre_id"]) %>
@@ -26,11 +25,10 @@
     <% end %>
 
       <ul>
-        <%= form_for @song, url: {controller: "songs", action: "create", genre_id: @genre.id, artist_id: @artist.id}, method: :post do |f| %>
+        <%= form_for @song, url: {controller: "songs", action: "update", id: @song.id, genre_id: @genre.id, artist_id: @artist.id } do |f| %>
           <li>Song Title: <%=f.text_field :song_name %></li>
-          <li> Soundcloud embed link: <%=f.text_field :scloud_embed %></li>
           <li> Your comment: <%=f.text_area :song_comment %></li>
-          <li><%= f.submit "Add Song" %></li>
+          <li><%= f.submit "Complete Edit" %></li>
         <% end %>
       </ul>
   </div>
