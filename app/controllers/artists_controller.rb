@@ -19,8 +19,15 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    @artist = Artist.find(params[:id])
-    @genre = Genre.find(params[:genre_id])
+    @artist = Artist.find(params["id"])
+    if @artist.songs.nil?
+      @genre = Genre.find(params["genre_id"])
+    else
+      current_song = Song.find(params["genre_id"]) #<-- this is a bug.
+      genre_id = current_song.genre.id
+      @genre = Genre.find(genre_id)
+    end
+    @songs = Song.where(artist: @artist)
   end
 
 

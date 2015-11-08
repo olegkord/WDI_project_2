@@ -4,11 +4,20 @@
     <ul>
       <li><%= image_tag("#{@artist.img_url}", size: "400")%></li>
       <li><%=@artist.artist_bio%></li>
+
     </ul>
-    <%= button_to "Add a Song", new_genre_artist_song_path(@genre,@artist), method: :get %>
+    <% binding.pry %>
+    <%= link_to "Add a song", new_genre_artist_song_path(@genre.id,@artist.id)%>
   </div>
 </div>
 
 <div class="row">
-
+  <div class="eight columns offset-by-two">
+    <ul>
+      <% @songs.each do |song| %>
+        <li><%= "#{song.scloud_embed}".html_safe %></li>
+        <li><%= song.song_comment %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

@@ -2,17 +2,24 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
-    @artist = Artist.find(params["artist_id"])
-    @genre = Genre.find(params["genre_id"])
   end
 
   def create
     @song = Song.new(song_params)
+    @song.artist_id = params["artist_id"]
+    @song.genre_id = params["genre_id"]
 
     if @song.save
-      redirect_to genre_artist_path(@song.artist_id)
+      # redirect_to {
+      #   controller: "artists",
+      #   action: "show",
+      #   song_id: "@song.id",
+      #   id: "#{params["artist_id"]}",
+      #   genre_id: "#{params["genre_id"]}"
+      # }
+      redirect_to genre_artist_path(@song.id, params["artist_id"])
     else
-      redner 'new'
+      render 'new'
     end
   end
 
