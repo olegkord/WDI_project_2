@@ -1,28 +1,39 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# GstreamApp
+## Goal:
+To allow users to discuss and classify individual songs in genres with minimal words.
 
-Things you may want to cover:
+## User Stories:
 
-* Ruby version
+* As a user (AAU) I want to (IWT) generate an account
+* AAU IWT be able to log in to the website
+* AAU IWT be able to add a genre to the list of genres
+* AAU IWT be able to add an artist to a genre of my choice
+* AAU IWT be able to add a song to an artist of my choice
+* AAU IWT be able to terminate my session and have the changes persist.
+* AAU IWT be able to view some content on g-stream even when I am not logged in.
+* AAU IWT be able to edit any contribution I have made to g-stream.
+* AAU IWT be able to delete any contribution I have made to g-stream.
 
-* System dependencies
+### The above made it into the app as it stands now.
 
-* Configuration
+Future feature user stories:
 
-* Database creation
+* AAU IWT be able to vote on in a particular song belongs on its genre via "like"
+* AAU IWT be able to add a genre to an existing artist and have him or her appear in the appropriate area.
+* AAU IWT be able to move a song into a different genre if it has <NUM> downvotes in its current area.
+* AAU IWT know that there are admins on the site that monitor and ban trolls.
+* AAU IWT be able to add songs via search
+* AAU IWT be able to create my own library of genres/artists and compare it to that other users.
+* AAU IWT be able to delete my account if I so choose.
 
-* Database initialization
+## Website flow:
 
-* How to run the test suite
+1) User creates account and logs in.
+2) User may view/interact with the existing content immediately by adding genres, artists, or songs.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Technologies Used:
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- Rails 4.0
+- Skeleton for CSS layout
